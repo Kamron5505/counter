@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"],
+        button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #333;
+            padding: 20px 40px;
+            border-radius: 30px;
+            box-shadow: 3px 3px 0 #111;
+        }
+
+        .counter button {
+            font-size: 24px;
+        }
+
+        .count {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .color-picker {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="input-group">
+        <input type="text" id="numberInput" placeholder="Enter your number" />
+        <button onclick="setCounter()">Send</button>
+    </div>
+
+    <div class="counter">
+        <button onclick="decrease()">-</button>
+        <span id="countDisplay" class="count" style="color: red;">19</span>
+        <button onclick="increase()">+</button>
+    </div>
+
+    <div class="color-picker">
+        <label for="colorInput" style="font-size: 24px;">Select color</label>
+        <input type="color" id="colorInput" value="#ff0000" />
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
